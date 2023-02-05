@@ -2,7 +2,7 @@ import express from 'express';
 import http from 'http';
 
 const app = express();
-const port = 6666;
+const port = 8888;
 const staticRoot = '.';
 
 app.use(express.static(staticRoot, {

@@ -3,7 +3,7 @@
 <head>
 </head>
 
-<body>
+<body style="padding: 40px;">
     <div style="display: flex;width: 100%;justify-content: space-around;">
         <div>
             <button id="btn1">run</button>
@@ -16,14 +16,6 @@
             <div>
                 if (false) {
                     console.log(obj);
-                }
-            </div>
-        </div>
-        <div>
-            <button id="btn3">run</button>
-            <div>
-                if (true) {
-                    console.log(JSON.parse(JSON.stringify(obj)));
                 }
             </div>
         </div>
@@ -54,24 +46,11 @@
             }
             setTimeout(() => log2(), 50);
         }
-        function log3 () {
-            const memory = performance.memory.totalJSHeapSize;
-            const usagedMemory = Math.floor(memory / MB);
-            box.insertAdjacentHTML('beforeend', `<span>${usagedMemory} </span>`);
-            const obj = { usagedMemory, str: 'g'.repeat(50 * MB) };
-            if (true) {
-                console.log(JSON.parse(JSON.stringify(obj)));
-            }
-            setTimeout(() => log3(), 50);
-        }
         btn1.addEventListener('click', function () {
             log1();
         });
         btn2.addEventListener('click', function () {
             log2();
-        });
-        btn3.addEventListener('click', function () {
-            log3();
         });
     </script>
 </body>
